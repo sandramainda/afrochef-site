@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AfroChef Connect - Chef Dashboard</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec6d13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                        "foreground-light": "#1b130d",
+                        "foreground-dark": "#f8f7f6",
+                        "card-light": "#ffffff",
+                        "card-dark": "#2d1f16",
+                        "border-light": "#e7d9cf",
+                        "border-dark": "#49392c",
+                        "subtle-light": "#9a6c4c",
+                        "subtle-dark": "#a18a7a",
+                        "success-light": "#07880e",
+                        "success-dark": "#34d399"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-background-light dark:bg-background-dark p-6 flex-shrink-0 border-r border-border-light dark:border-border-dark">
+<div class="flex flex-col h-full">
+<div class="flex items-center gap-3 mb-10">
+<img alt="Chef Amina" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIB5WRiBnQhNXvewjkuimpJfTd793xVknUolUqhXuv5UoxaXdVXUJN4SlAG7nToGbLZ-ETkJ0TFn_yTOjmyk5TcTQXaUluZ3wRH359zkL3VVWKlhv0aKKxhPzrlesQFSowLO2jv6R6hv_YrW_VT7EiaRHvGR2RdQrdQfLu8VlKmcqPSC1wAfCjgIjsVXozBGLBuY7CHsldHcQBeISyvNbShSQ3OfbroKHq5g5vYmvJqWrftaB2Wh8-zSCwUepwJUOOHzrJvvNu3k6D"/>
+<div>
+<h1 class="text-base font-bold text-foreground-light dark:text-foreground-dark">Chef Amina</h1>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Dallas, TX</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors duration-200 text-subtle-light dark:text-subtle-dark dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors duration-200 text-subtle-light dark:text-subtle-dark dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-medium">Dishes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors duration-200 text-subtle-light dark:text-subtle-dark dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-medium">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors duration-200 text-subtle-light dark:text-subtle-dark dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-medium">Subscription</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<div class="max-w-7xl mx-auto">
+<header class="mb-8">
+<h1 class="text-4xl font-bold text-foreground-light dark:text-foreground-dark">Overview</h1>
+</header>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<h3 class="text-base font-medium text-subtle-light dark:text-subtle-dark">Dishes</h3>
+<p class="text-3xl font-bold my-2 text-foreground-light dark:text-foreground-dark">12</p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+10% this month</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<h3 class="text-base font-medium text-subtle-light dark:text-subtle-dark">Reviews</h3>
+<p class="text-3xl font-bold my-2 text-foreground-light dark:text-foreground-dark">4.8 <span class="text-lg font-medium text-subtle-light dark:text-subtle-dark">(25)</span></p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+5% this month</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<h3 class="text-base font-medium text-subtle-light dark:text-subtle-dark">Profile Views</h3>
+<p class="text-3xl font-bold my-2 text-foreground-light dark:text-foreground-dark">150</p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+15% this month</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<h3 class="text-base font-medium text-subtle-light dark:text-subtle-dark">Messages</h3>
+<p class="text-3xl font-bold my-2 text-foreground-light dark:text-foreground-dark">3</p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+20% this month</p>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-foreground-light dark:text-foreground-dark mb-6">Recent Activity</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div class="w-px flex-grow bg-border-light dark:bg-border-dark"></div>
+</div>
+<div class="pt-1.5 pb-6">
+<p class="font-semibold text-foreground-light dark:text-foreground-dark">New Order Received</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Order #12345 - 2 items</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">edit</span>
+</div>
+<div class="w-px flex-grow bg-border-light dark:bg-border-dark"></div>
+</div>
+<div class="pt-1.5 pb-6">
+<p class="font-semibold text-foreground-light dark:text-foreground-dark">Profile Updated</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Updated bio and profile picture</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<div class="pt-1.5 pb-6">
+<p class="font-semibold text-foreground-light dark:text-foreground-dark">New Review Received</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">5-star review from Sarah</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec6d13",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221810",
+              "text-light": "#1b130d",
+              "text-dark": "#f8f7f6",
+              "muted-light": "#9a6c4c",
+              "muted-dark": "#a8998d",
+              "border-light": "#e7d9cf",
+              "border-dark": "#3e2f23",
+              "surface-light": "#f3ece7",
+              "surface-dark": "#2d1f15",
+            },
+            fontFamily: {
+              display: ["Work Sans", "Noto Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen w-full">
+<aside class="flex h-screen w-64 flex-col border-r border-border-light bg-background-light p-4 dark:border-border-dark dark:bg-background-dark">
+<div class="flex items-center gap-3 p-2">
+<img alt="Chef Amina's avatar" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2krvemOhiGsh_7O7yFh-N6-gzgfPtFOikRWI4Ls-zXorUfAa0a0f8SXJNtbc7LOzgWeEZ2twyEBQjm593MU1eUSKN93Fh3SyeENFgoDOItQEO73LCWPVU2NnFV9asNSfDv6OKLZf703KLr-kX6Asc8SLcIE60r45_Q3hGVJaLRJEnM_0fq5G92xk3GE1tttxZ0XBQT2R8UU2a4PqefkDOkQKy-6uRiwgIi7XwLzr6xySQo96GeMsWVIT4148gzf9cocEMbW9VLGpS"/>
+<div>
+<h1 class="font-bold text-text-light dark:text-text-dark">Chef Amina</h1>
+<p class="text-sm text-muted-light dark:text-muted-dark">AfroChef Connect</p>
+</div>
+</div>
+<nav class="mt-8 flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded px-3 py-2 text-text-light hover:bg-surface-light dark:text-text-dark dark:hover:bg-surface-dark" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 rounded px-3 py-2 text-text-light hover:bg-surface-light dark:text-text-dark dark:hover:bg-surface-dark" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm font-medium">Profile</span>
+</a>
+<a class="flex items-center gap-3 rounded bg-primary/20 px-3 py-2 font-bold text-primary dark:bg-primary/30" href="#">
+<span class="material-symbols-outlined">inbox</span>
+<span class="text-sm">Inquiries</span>
+</a>
+<a class="flex items-center gap-3 rounded px-3 py-2 text-text-light hover:bg-surface-light dark:text-text-dark dark:hover:bg-surface-dark" href="#">
+<span class="material-symbols-outlined">star</span>
+<span class="text-sm font-medium">Reviews</span>
+</a>
+<a class="flex items-center gap-3 rounded px-3 py-2 text-text-light hover:bg-surface-light dark:text-text-dark dark:hover:bg-surface-dark" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-sm font-medium">Payouts</span>
+</a>
+</nav>
+</aside>
+<main class="flex-1">
+<div class="border-b border-border-light p-6 dark:border-border-dark">
+<h1 class="text-3xl font-bold text-text-light dark:text-text-dark">Inquiries</h1>
+<p class="mt-1 text-muted-light dark:text-muted-dark">Manage your customer inquiries and bookings</p>
+</div>
+<div class="p-6">
+<div class="border-b border-border-light dark:border-border-dark">
+<nav class="-mb-px flex space-x-6">
+<a class="border-b-2 border-primary px-1 py-3 text-sm font-bold text-primary" href="#">New</a>
+<a class="border-b-2 border-transparent px-1 py-3 text-sm font-medium text-muted-light hover:border-gray-300 hover:text-text-light dark:text-muted-dark dark:hover:border-gray-700 dark:hover:text-text-dark" href="#">Responded</a>
+<a class="border-b-2 border-transparent px-1 py-3 text-sm font-medium text-muted-light hover:border-gray-300 hover:text-text-light dark:text-muted-dark dark:hover:border-gray-700 dark:hover:text-text-dark" href="#">Quoted</a>
+<a class="border-b-2 border-transparent px-1 py-3 text-sm font-medium text-muted-light hover:border-gray-300 hover:text-text-light dark:text-muted-dark dark:hover:border-gray-700 dark:hover:text-text-dark" href="#">Booked</a>
+<a class="border-b-2 border-transparent px-1 py-3 text-sm font-medium text-muted-light hover:border-gray-300 hover:text-text-light dark:text-muted-dark dark:hover:border-gray-700 dark:hover:text-text-dark" href="#">Archived</a>
+</nav>
+</div>
+<div class="mt-6 overflow-hidden rounded-lg border border-border-light bg-background-light dark:border-border-dark dark:bg-surface-dark">
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-border-light dark:divide-border-dark">
+<thead class="bg-surface-light dark:bg-surface-dark/50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-muted-light dark:text-muted-dark" scope="col">Date</th>
+<th class="px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-muted-light dark:text-muted-dark" scope="col">Customer</th>
+<th class="px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-muted-light dark:text-muted-dark" scope="col">Details</th>
+<th class="px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-muted-light dark:text-muted-dark" scope="col">Status</th>
+<th class="relative px-6 py-3" scope="col">
+<span class="sr-only">Actions</span>
+</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light bg-background-light dark:divide-border-dark dark:bg-background-dark">
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-muted-light dark:text-muted-dark">July 15, 2024</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-text-light dark:text-text-dark">Fatima Hassan</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-muted-light dark:text-muted-dark">Dinner for 6, Ethiopian cuisine</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/30">New</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">View</a>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-muted-light dark:text-muted-dark">July 16, 2024</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-text-light dark:text-text-dark">Kwame Mensah</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-muted-light dark:text-muted-dark">Lunch for 4, Ghanaian cuisine</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/30">New</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">View</a>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-muted-light dark:text-muted-dark">July 17, 2024</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-text-light dark:text-text-dark">Aisha Diallo</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-muted-light dark:text-muted-dark">Catering for 20, Senegalese cuisine</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/30">New</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">View</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
