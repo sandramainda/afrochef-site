@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AfroChef Connect - Find a Chef</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec6d13",
+            "background-light": "#f8f7f6",
+            "background-dark": "#221810",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ec6d13' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-3" href="#">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold text-zinc-900 dark:text-white tracking-tight">AfroChef Connect</h1>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary" href="#">Home</a>
+<a class="text-sm font-bold text-primary" href="#">Chefs</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Catering</a>
+<a class="text-sm font-medium hover:text-primary" href="#">About Us</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-primary/10 dark:bg-primary/20 text-zinc-900 dark:text-white placeholder:text-zinc-500 dark:placeholder:text-zinc-400 focus:ring-2 focus:ring-primary border-none pl-10 h-10 text-sm" placeholder="Search chefs..." type="text" value=""/>
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 text-zinc-500 dark:text-zinc-400">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+</div>
+</div>
+<button class="hidden sm:inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-sm font-bold text-white shadow-sm hover:bg-primary/90 transition-colors">
+              Post a Request
+            </button>
+<button class="rounded-full">
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDD0WmZdyMn_bbffSGna-4xn8t2xDcakXbjp6S0UGsO0I5Qcgtp_GfXWSFj8s34eFeEn7DR3sFFDNvtX8kVqstleTNH3o6uFyRGUO3sIGSokLYQXcLa7mhtX1Wr9pcD7eSOBKkVHIDXjkSyqaUbwhLD_onfIZWSg8QtBCOFGRqBt8h5dDs8oDkgZK667cMb7bst9uQZZs5Bn_Xw7T83YAVOUlGmfqqYujrctDNqjOJzULWE2AbpiMja1hFNW5rMQkClGdYMmDP07CFG");'></div>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-80 lg:shrink-0">
+<div class="sticky top-28 space-y-6">
+<h2 class="text-2xl font-bold text-zinc-900 dark:text-white">Filters</h2>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1" for="cuisine">Cuisine</label>
+<select class="form-select w-full rounded-lg border-primary/30 dark:border-primary/40 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="cuisine">
+<option>All Cuisines</option>
+<option>Ghanaian</option>
+<option>Nigerian</option>
+<option>Ethiopian</option>
+<option>Senegalese</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1" for="spice-level">Spice Level</label>
+<select class="form-select w-full rounded-lg border-primary/30 dark:border-primary/40 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="spice-level">
+<option>Any</option>
+<option>Mild</option>
+<option>Medium</option>
+<option>Spicy</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1" for="authenticity">Authenticity</label>
+<select class="form-select w-full rounded-lg border-primary/30 dark:border-primary/40 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="authenticity">
+<option>Any</option>
+<option>Traditional</option>
+<option>Fusion</option>
+<option>Inspired</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1" for="occasion">Occasion</label>
+<select class="form-select w-full rounded-lg border-primary/30 dark:border-primary/40 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="occasion">
+<option>Any</option>
+<option>Weddings</option>
+<option>Parties</option>
+<option>Casual</option>
+<option>Corporate</option>
+</select>
+</div>
+<button class="w-full inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-sm font-bold text-white shadow-sm hover:bg-primary/90 transition-colors">
+                Apply Filters
+              </button>
+</form>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<h2 class="text-3xl font-bold text-zinc-900 dark:text-white tracking-tight">Chefs in Dallas</h2>
+<div class="flex border-b border-primary/20 dark:border-primary/30">
+<a class="px-4 py-2 text-sm font-bold border-b-2 border-primary text-primary" href="#">Grid View</a>
+<a class="px-4 py-2 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary border-b-2 border-transparent hover:border-primary/50" href="#">Map View</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="group">
+<div class="aspect-square w-full overflow-hidden rounded-xl bg-primary/10 dark:bg-primary/20 mb-3">
+<img alt="Chef Kwame" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU3Xp4PercGxfvRO5-ufRxA8nl_j4Sa9VunvaahfzWzohaHexaD2XNSSvPUZ4fsNtXlfOpm95EdU7EJxNgZ0KMTxdsQ7HyZaJ4Jh-YvN2cMnOtzfVhFJ-dEaSwxkrkMgLYMHApDNmBEbkV_UFdiZwP4Qab5dOmJGLpq3AKukc_KXX2rVe6F7XtLuP-w0VeXvp9k2KiozEnou245oaIWLsncORnL2hiHg3VBiPPDuVSdBxPsydJ45LgzOzWzmw4TeKz1Pprvu4J_yag"/>
+</div>
+<div>
+<h3 class="font-bold text-zinc-800 dark:text-white">Chef Kwame</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Ghanaian Cuisine</p>
+</div>
+</div>
+<div class="group">
+<div class="aspect-square w-full overflow-hidden rounded-xl bg-primary/10 dark:bg-primary/20 mb-3">
+<img alt="Chef Aisha" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD8sdllkv1Ah_kNCKWGmp2fcDnlR4ZQaGYQI42u2HognPqEXUdV5NS7MLHS7UOra0dW_bEQSxJh7MxdG4nar82xfGPV2hmcdi2M2rrdVcFN6OGU-ZbFw8DEdTjx9wWAb7JKlFaKA6tXDcGebD4Fq1r46HCeTrvVbll8gulMSAlOOZILp05BXbFRO0agSBzVnlcs0ahgfl5-lm1U5LSt0bRpnnEyNAlhFaFg_cuWzAYWpnCzeSJg0hLj_BKTCEEG8MgJmMwCLO7rKYV"/>
+</div>
+<div>
+<h3 class="font-bold text-zinc-800 dark:text-white">Chef Aisha</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Nigerian Cuisine</p>
+</div>
+</div>
+<div class="group">
+<div class="aspect-square w-full overflow-hidden rounded-xl bg-primary/10 dark:bg-primary/20 mb-3">
+<img alt="Chef Chidi" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcbJnwBETbq19mFKGbAq4VjUbCBk_7nJc5lphkbGH02yOPu4DWO4Colxcx7NSuNOEa26Fn3nmmKOTbn1stGyCW31QgXWzclu72u3czFHkynfWTZFkES6_0xjWSfkTRiCyQqoieddbq7t_EFs26j2yk3vMQ-_EfU1D0rxDSt-nVTTAmuE5e-yHM-sNuO8ITAm4gRZ2ZVchJ4w6NYX733YDQBUA500Xgi6jfHC8Xt82LGwM6T1x4zdzNw90kHKiqzYxamHnWn4-Awy-K"/>
+</div>
+<div>
+<h3 class="font-bold text-zinc-800 dark:text-white">Chef Chidi</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Ethiopian Cuisine</p>
+</div>
+</div>
+<div class="group">
+<div class="aspect-square w-full overflow-hidden rounded-xl bg-primary/10 dark:bg-primary/20 mb-3">
+<img alt="Chef Fatima" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYGpPBv-2Qe7JOxYLx2eqMLEK5lkWtwYj1AlMMZ7x0uBnBy8XqAOiQTr6WpgEqk0CnQNDWHNQQWSqsofujxE_FjY3oerps9q9Qfu0_3c2MkjNHkXIdOBi4MIgn9LWmnx6khoTJ4hSjZVw9DaRz7nu_uRc_NI7_gPviXtFU1IM8eRv8Wm-IvaFevecm6hUZWVBXFEno2E5JS4iCbfa4DztRWH4VMaPDUYwXANy_Tf6FrEosTRA3f1Gniea24MLEm6fSmJ5PC6u63uXJ"/>
+</div>
+<div>
+<h3 class="font-bold text-zinc-800 dark:text-white">Chef Fatima</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Senegalese Cuisine</p>
+</div>
+</div>
+<div class="group">
+<div class="aspect-square w-full overflow-hidden rounded-xl bg-primary/10 dark:bg-primary/20 mb-3">
+<img alt="Chef Idris" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJyWyEqHmy3v1hWYgj2J_wbwfxMPpxjZs7SZtohdgHartD0FmK6h1SvrpFuuI3pUtTp1lgnj1cXxMazaIPfxjOiclovEERRKJxVqpkxBv-dfozwqOwHIgBp8tTn2ds6suQxrsbUOoUNYbGkVHW1_DHh-CQTx8BAqPBFVQLkW0uFtr0XrOVXMhvez4cDpB2245rUXOLwer_RGeMjDNApCF_axgYATm38x31kKbstJpYmgsk02Yhyz8o7lzUZ7Y3WU8WGnAGnw4ElFGc"/>
+</div>
+<div>
+<h3 class="font-bold text-zinc-800 dark:text-white">Chef Idris</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Kenyan Cuisine</p>
+</div>
+</div>
+<div class="group">
+<div class="aspect-square w-full overflow-hidden rounded-xl bg-primary/10 dark:bg-primary/20 mb-3">
+<img alt="Chef Nneka" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3hr7LeO1KcW8a0cfyiBgjgw6YGbHykzmgFCHijKbS3g6yLdPR86CuALT9MhRSOxdIK9yq1ghXDXkWT1GWy5GfZq0hy5GEVYYwHnywwhen_BAx_B1R_IZx-pnc0zjmsOW7gZ3wW7-4JQrMtekfzcsZ5fld3cH18n2oJ0vZ86yPXeWARojBAlHbMOJAp8KE__du9Jb-yFzlaTvO22ZIZGQxVlFyILZJEcSzPIAgS4r6QuA5eDb5HrUBUpAvlnZENhSwuPwai7ps5Dmu"/>
+</div>
+<div>
+<h3 class="font-bold text-zinc-800 dark:text-white">Chef Nneka</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Cameroonian Cuisine</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
